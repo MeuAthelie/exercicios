@@ -32,22 +32,26 @@ switch($_POST["classe"]){
     case 1:
 echo "<label>Voo Maximo(Altura):
                     <input type=\"text\" name=\"Max_voo\" placehoder=\"Voo maximo...\" required/>
-                </label><br />";
+                </label><br />
+                <input type=\"hidden\" name=\"det\" value=\"1\" required/>";
 break;
 case 2:
 echo "<label>Velocidade Maxima:
                     <input type=\"text\" name=\"Max_vel\" placehoder=\"Velocidade maxima...\" required/>
-                </label><br />";
+                </label><br />
+                <input type=\"hidden\" name=\"det\" value=\"2\" required/>";
 break;
 case 3:
 echo "<label>Tempo máximo submerso em água:
                     <input type=\"text\" name=\"Max_Sub\" placehoder=\"Maximo submerso...\" required/>
-                </label><br />";
+                </label><br />
+                <input type=\"hidden\" name=\"det\" value=\"3\" required/>";
 break;
 case 4:
 echo "<label>Temperatura de Sobrevivencia:
                     <input type=\"text\" name=\"Temperatura_media\" placehoder=\"Temperatura...\" required/>
-                </label><br />";
+                </label><br />
+                <input type=\"hidden\" name=\"det\" value=\"4\" required/>";
             }
 ?>
             </fieldset>

@@ -3,40 +3,43 @@ include "classAves.php";
 include "classMamiferos.php";
 include "classAnfibios.php";
 include "classPeixes.php";
-    echo '<h2>Lista de animais catalogados:</h2>';
+    echo "<h2>Lista de animais catalogados:</h2>";
 
    
-    if(foreach ($_SESSION["Aves"]){ 
-        echo "  <p>Cor: <span style='Peso:".$c->get_peso()."'>".$c->get_peso()."</span></p>
-                <p>Comprimento:" .$c->get_comprimento()."</br>
-                <p>Altura: ".$c->get_altura()."</br>
-                <p>Cor: ".$c->get_cor()."
-                <p>Especie: ".$c->get_especie()."
-                <p>Altura Maxima de Voo: ".$c->get_Max_voo()."
+   foreach ($_POST["A"]){ 
+        echo "  <p>Cor: <span style='Peso:".$av->get_peso()."'>".$av->get_peso()."</span></p>
+                <p>Comprimento:" .$av->get_comprimento()."</br>
+                <p>Altura: ".$av->get_altura()."</br>
+                <p>Cor: ".$av->get_cor()."
+                <p>Especie: ".$av->get_especie()."
+                <p>Altura Maxima de Voo: ".$av->get_Max_voo()."
                 <hr/>";
-    }elseif(foreach ($_SESSION["Mamifero"]){
-        echo "  <p>Cor: <span style='Peso:".$c->get_peso()."'>".$c->get_peso()."</span></p>
-                <p>Comprimento:" .$c->get_comprimento()."</br>
-                <p>Altura: ".$c->get_altura()."</br>
-                <p>Cor: ".$c->get_cor()."
-                <p>Especie: ".$c->get_especie()."
-                <p>Velocidade Maxima: ".$c->get_Max_vel()."
+   }
+   foreach ($_POST["M"]){
+        echo "  <p>Cor: <span style='Peso:".$ma->get_peso()."'>".$ma->get_peso()."</span></p>
+                <p>Comprimento:" .$ma->get_comprimento()."</br>
+                <p>Altura: ".$ma->get_altura()."</br>
+                <p>Cor: ".$ma->get_cor()."
+                <p>Especie: ".$ma->get_especie()."
+                <p>Velocidade Maxima: ".$ma->get_Max_vel()."
                 <hr/>";
-    }elseif(foreach ($_SESSION["anfi_rept"]){
-        echo "  <p>Cor: <span style='Peso:".$c->get_peso()."'>".$c->get_peso()."</span></p>
-                <p>Comprimento:" .$c->get_comprimento()."</br>
-                <p>Altura: ".$c->get_altura()."</br>
-                <p>Cor: ".$c->get_cor()."
-                <p>Especie: ".$c->get_especie()."
-                <p>:Tempo máximo submerso em água ".$c->get_Max_Sub()."
+   }
+   foreach ($_POST["R"]){
+        echo "  <p>Cor: <span style='Peso:".$an->get_peso()."'>".$an->get_peso()."</span></p>
+                <p>Comprimento:" .$an->get_comprimento()."</br>
+                <p>Altura: ".$an->get_altura()."</br>
+                <p>Cor: ".$an->get_cor()."
+                <p>Especie: ".$an->get_especie()."
+                <p>:Tempo máximo submerso em água ".$an->get_Max_Sub()."
                 <hr/>";
-    }else{
-        echo "  <p>Cor: <span style='Peso:".$c->get_peso()."'>".$c->get_peso()."</span></p>
-                <p>Comprimento:" .$c->get_comprimento()."</br>
-                <p>Altura: ".$c->get_altura()."</br>
-                <p>Cor: ".$c->get_cor()."
-                <p>Especie: ".$c->get_especie()."
-                <p>Temperatura de Sobrevivencia: ".$c->get_Temperatura_media()."
+    }
+    foreach ($_POST["P"]){
+        echo "  <p>Cor: <span style='Peso:".$pe->get_peso()."'>".$pe->get_peso()."</span></p>
+                <p>Comprimento:" .$pe->get_comprimento()."</br>
+                <p>Altura: ".$pe->get_altura()."</br>
+                <p>Cor: ".$pe->get_cor()."
+                <p>Especie: ".$pe->get_especie()."
+                <p>Temperatura de Sobrevivencia: ".$pe->get_Temperatura_media()."
                 <hr/>";
     }
 ?>
