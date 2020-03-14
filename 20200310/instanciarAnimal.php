@@ -1,6 +1,7 @@
 
 <?php
     session_start();
+    include "cabecalho.php";
     include "classAves.php";
     include "classMamiferos.php";
     include "classAnfibios.php";
